@@ -26,7 +26,7 @@ a_k = 0.1
 b_k = 10
 
 #a) Regula-Falsi:
-iteraciones = 50
+iteraciones = 60
 print "k\t\ta_k\t\tb_k\t\tF(a_k),'\t\t', F(b_k),'\t\t', m_kmas1, \t\t F(m_kmas1)"
 for k in range(iteraciones):
     m_kmas1 = a_k - ((b_k - a_k) / (F(b_k) - F(a_k))) * F(a_k)
