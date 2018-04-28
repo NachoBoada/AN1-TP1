@@ -22,8 +22,8 @@ def F(y, m = 0):
     
 
 ''' Punto 1 - Mo = 0 '''
-a_k = 0.1
-b_k = 10
+a_k = -10
+b_k = 1
 
 #a) Regula-Falsi:
 iteraciones = 60
@@ -39,6 +39,8 @@ for k in range(iteraciones):
         a_k = m_kmas1
     else:
         b_k = m_kmas1
+
+
         
     
 
