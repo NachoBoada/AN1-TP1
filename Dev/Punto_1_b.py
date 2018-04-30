@@ -21,7 +21,7 @@ a = 1
 def F(y):
     return math.sqrt(y)
 
-#Próximo, se define un punto perteneciente al intervalo que cumple con los requisitos
+#Proximo, se define un punto perteneciente al intervalo que cumple con los requisitos
 #xseed por la variable x y por ser la semilla del problema :)
 xseed = 0.5
 
