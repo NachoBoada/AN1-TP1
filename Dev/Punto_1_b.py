@@ -18,8 +18,8 @@ a = 1
 #Funcion a la que deseo hallar punto fijo
 #Provisoria: utilizo raiz de x como ejemplo para probar que primero
 #funciona el metodo implementado
-def F(y):
-    return math.sqrt(y)
+def F(y, m = 0):
+    return (-2 * K * y * (1 - (Lo / (y**2 + a**2))**(1/2)) - m * g)
 
 #Proximo, se define un punto perteneciente al intervalo que cumple con los requisitos
 #xseed por la variable x y por ser la semilla del problema :)

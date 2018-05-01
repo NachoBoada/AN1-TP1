@@ -20,7 +20,7 @@ def F(y, m = 0):
     return (-2 * K * y * (1 - (Lo / (y**2 + a**2))**(1/2)) - m * g)
 
 def cte_asintotica_del_error(r_kmas1, r_k, r_kmenos1, p):
-    return ((r_kmas1 - r_k) / (r_k - r_kmenos1)**p)
+    return (abs((r_kmas1 - r_k)) / abs((r_k - r_kmenos1))**p)
 
 def orden_de_convergencia(r_kmas1, r_k, r_kmenos1, r_kmenos2):
     return (math.log( (r_kmas1 - r_k)/(r_k - r_kmenos1) ) / math.log( (r_k - r_kmenos1)/(r_kmenos1 - r_kmenos2) ))
