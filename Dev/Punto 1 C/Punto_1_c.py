@@ -36,7 +36,7 @@ def G(y):
 xseed = 1
 
 
-#b) Punto Fijo:
+#c) Newton-Raphson:
 iteraciones = 60
 print "k\t\tx_k\t\tDELTAX (x_k - x_k-1)\t\tDELTAX/X_k"
 x_k = xseed
