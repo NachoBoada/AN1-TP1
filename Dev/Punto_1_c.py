@@ -23,7 +23,7 @@ def F(y,m=0):
 
 #Derivada de la funcion que deseo hallar raiz
 def Fprima(y):
-    return ((-2*K*(1-(Lo/math.sqrt((y**2)+(a**2)))))+(Lo*(-0,5*((math.sqrt((y**2)+(a**2)))**(-3)))*2*K*y))
+    return ((-2*K*(1-(Lo/((y**2)+(a**2))**(1/2))))+(Lo*(-0.5*((((y**2)+(a**2))**(1/2))**(-3)))*2*K*y))
 
 #Newton Raphson es un metodo de punto fijo con una funcion de punto fijo particular
 #La funcion es g(y)
@@ -33,7 +33,7 @@ def G(y):
             
 #Próximo, se define un punto perteneciente al intervalo que cumple con los requisitos
 #xseed por la variable x y por ser la semilla del problema :)
-xseed = 0.5
+xseed = 1
 
 
 #b) Punto Fijo:
