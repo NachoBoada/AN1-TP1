@@ -31,7 +31,7 @@ def Fprima(y):
 def G(y):
     return (y - (F(y)/Fprima(y)))
             
-#Próximo, se define un punto perteneciente al intervalo que cumple con los requisitos
+#PrÃ³ximo, se define un punto perteneciente al intervalo que cumple con los requisitos
 #xseed por la variable x y por ser la semilla del problema :)
 xseed = 1
 
