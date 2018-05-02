@@ -20,7 +20,7 @@ a = 1
 def F(y,m=0):
     return (2*K*y*(1-(Lo/math.sqrt((y**2)+(a**2))))-(m*g))
 
-#Próximo, se define un punto perteneciente al intervalo que cumple con los requisitos
+#Proximo, se define un punto perteneciente al intervalo que cumple con los requisitos
 #xseed por la variable x y por ser la semilla del problema :)
 xseed = 1.74559239637
 

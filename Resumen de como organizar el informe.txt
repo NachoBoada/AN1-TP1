@@ -1,0 +1,34 @@
+12. Cada entrega consta de 2 partes:
+	a-Por un lado se debe entregar el informe del TP
+	b-Por otro lado se deberá subir un archivo con el código fuente en formato texto (.txt). (todo el codigo junto)
+		La entrega del código fuente deberá hacerse a través del formulario electrónico que la página de la
+		materia dispone para tal fin (http://www.fi.uba.ar/materias/7512/subircodigo.html). Luego de la subida
+		exitosa del código, se le informará un número de recibo, el cual deberá anotar para cualquier reclamo.
+		No subir el código en tiempo y forma se traduce en descalificación del curso, ya que es parte de la
+		entrega del TP.
+	
+13. Si la entrega se realiza a través del campus, se debe subir un único archivo en formato .doc o .pdf.
+
+16. El nombre de los archivos:
+		Informe de TP: LCXX.doc o LCXX.pdf Código fuente: LCXX.txt
+		L indica el lenguaje usado. (B: Basic, P: Pascal, D: Delphi, C: C/C++, F: Fortran, M: Matlab)
+		C indica el Curso. (Tarela: T)
+		XX indica el número de grupo. (Ej: 09)
+			Por ejemplo, el grupo 9 del turno Tarela que programó en Basic deberá subir los archivos:
+				i) Informe del TP: BT09.doc
+				ii) Código fuente: BT09.txt
+nosotros-- informe: PT21.doc      codigo: PT21.txt
+
+17. Dentro del archivo código fuente debe figurar en la primera línea:
+		Apellido – Padrón – Turno y Fecha.
+
+El informe de un TP se organizará de la siguiente manera:
+	2. Introducción, incluyendo objetivos y un resumen del trabajo (1 página máximo)
+	3. Desarrollo del trabajo indicando lo realizado; cuando corresponda, incluir figuras y tablas que
+	condensen información y faciliten la comprensión de los resultados. En esta sección se
+	respetará el orden y numeración de los ítems requeridos en el TP.
+	4. Conclusiones
+	5. Anexo I: código fuente del programa, el cual debe estar identificado con los nombres de los
+	autores y números de padrón como parte del código.
+	6. Anexo II: salidas de datos del programa con los resultados numéricos tal cual sale por pantalla
+	(sin editar posteriormente) (copiar y pegar o Imprimir máximo 5 hojas)
