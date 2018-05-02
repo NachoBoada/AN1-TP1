@@ -1,0 +1,12 @@
+log punto 1 c
+
+	terminado el codigo de newton raphson
+	no hay aparente intervalo de convergencia viendo el grafico de la funcion de newton raphson: g(x)=x-F(x)/F'(x)
+	ver archivo g(x) nraphson grafico.png
+	
+	probadas algunas semillas, siempre diverge
+	xseed1 = 0.1 --> diverge (resultados 1c xseed1.txt)
+	xseed2 = 2 ----> diverge (resultados 1c xseed2.txt)
+	xseed3 = 1 ----> diverge (resultados 1c xseed3.txt)
+	
+	OBSERVACION deltax/x_k siempre tiende a 1????
