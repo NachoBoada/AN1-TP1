@@ -17,7 +17,7 @@ a = 1
 #Esta es la funcion a la que se le deben hallar las raices
 ''' Fy = -2 * k * y * (1 - (Lo / (y**2 + a**2))**(1/2)) - m * g '''
 def F(y, m = 0):
-    return (-2 * K * y * (1 - (Lo / (y**2 + a**2))**(1/2)) - m * g)
+    return (-2 * K * y * (1 - (Lo / (y**2 + a**2)**(1/2))) - m * g)
 
 def cte_asintotica_del_error(r_kmas1, r_k, r_kmenos1, p):
     return (abs((r_kmas1 - r_k)) / abs((r_k - r_kmenos1))**p)
@@ -30,8 +30,8 @@ def orden_de_convergencia(r_kmas1, r_k, r_kmenos1, r_kmenos2):
 
 #a) Regula-Falsi:
 M = 0.3 * Mo
-a_k = 0.1
-b_k = 19
+a_k = -5
+b_k = -1
 iteraciones = 90
 r_kmenos2 = 0
 r_kmenos1 = 0
