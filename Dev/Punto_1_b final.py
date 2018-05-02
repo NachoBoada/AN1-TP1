@@ -15,25 +15,14 @@ Mo = 100000 / NP
 Mo = round(Mo, 3)
 a = 1
 
-#Funcion a la que deseo hallar raiz
-#Provisoria: utilizo raiz de x como ejemplo para probar que primero
-#funciona el metodo implementado
+#Funcion a la que deseo hallar punto fijo
+#Esta es la funcion del trabajo practico
 def F(y,m=0):
     return (2*K*y*(1-(Lo/math.sqrt((y**2)+(a**2))))-(m*g))
 
-#Derivada de la funcion que deseo hallar raiz
-def Fprima(y):
-    return ((-2*K*(1-(Lo/math.sqrt((y**2)+(a**2)))))+(Lo*(-0,5*((math.sqrt((y**2)+(a**2)))**(-3)))*2*K*y))
-
-#Newton Raphson es un metodo de punto fijo con una funcion de punto fijo particular
-#La funcion es g(y)
-
-def G(y):
-    return (y - (F(y)/Fprima(y)))
-            
 #Próximo, se define un punto perteneciente al intervalo que cumple con los requisitos
 #xseed por la variable x y por ser la semilla del problema :)
-xseed = 0.5
+xseed = 1.74559239637
 
 
 #b) Punto Fijo:
@@ -41,7 +30,7 @@ iteraciones = 60
 print "k\t\tx_k\t\tDELTAX (x_k - x_k-1)\t\tDELTAX/X_k"
 x_k = xseed
 for k in range(iteraciones):
-    x_kmas1 = G(x_k)
+    x_kmas1 = F(x_k)
     print k+1,'\t\t', x_kmas1,'\t\t', x_kmas1 - x_k,'\t\t', (x_kmas1 - x_k)/x_k
     if (x_kmas1 == x_k):
         raiz = x_kmas1

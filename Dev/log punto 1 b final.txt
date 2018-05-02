@@ -1,0 +1,14 @@
+log punto 1 b
+
+-se prueba el algoritmo de punto fijo con raiz de x
+	el algoritmo se prueba con el archivo Punto_1_b provisorio.py
+	en el intervalo [0,5 .. 2] se cumplen las condiciones para que el metodo converja
+	se realizala prueba...
+	resultados en el archivo resultados1bprovisoria.txt
+	prueba exitosa
+	
+- se prueba el algoritmo de punto fijo con la funcion pedida por el tp
+	esto se realizara en un archivo nuevo de nombre Punto_1_b final
+	No hay intervalo donde pueda garantizar la convergencia del metodo con esta funcion, sin embargo, procedo a probar en algunos puntos basandome en los resultados del punto a b
+	xseed 1 = 0.1 - resultados: divergencia (archivo: resultados_1b_final_xseed1.txt)
+	xseed 2 = 1.74559239637 - resultados: tambien diverge a pesar de ser un numero cercano a la raiz, (sabemos esto por el punto a) (archivo: resultados_1b_final_xseed2.txt)
