@@ -19,11 +19,11 @@ a = 1
 #Provisoria: utilizo raiz de x como ejemplo para probar que primero
 #funciona el metodo implementado
 def F(y,m=0):
-    return (2*K*y*(1-(Lo/math.sqrt((y**2)+(a**2))))-(m*g))
+    return (-2*K*y*(1-Lo/(math.sqrt((y**2)+(a**2))))-m*g)
 
 #Derivada de la funcion que deseo hallar raiz
 def Fprima(y):
-    return ((-2*K*(1-(Lo/((y**2)+(a**2))**(1/2))))+(Lo*(-0.5*((((y**2)+(a**2))**(1/2))**(-3)))*2*K*y))
+    return (-2*K*(1-Lo*((y**2+a**2)**(-1/2)))-2*K*y*(Lo*y*((y**2+a**2)**(-3/2))))
 
 #Newton Raphson es un metodo de punto fijo con una funcion de punto fijo particular
 #La funcion es g(y)
@@ -31,9 +31,9 @@ def Fprima(y):
 def G(y):
     return (y - (F(y)/Fprima(y)))
             
-#Próximo, se define un punto perteneciente al intervalo que cumple con los requisitos
+#Proximo, se define un punto perteneciente al intervalo que cumple con los requisitos
 #xseed por la variable x y por ser la semilla del problema :)
-xseed = 1
+xseed = 1.745
 
 
 #c) Newton-Raphson:
@@ -43,7 +43,7 @@ x_k = xseed
 for k in range(iteraciones):
     x_kmas1 = G(x_k)
     print k+1,'\t\t', x_kmas1,'\t\t', x_kmas1 - x_k,'\t\t', (x_kmas1 - x_k)/x_k
-    if (x_kmas1 == x_k):
+    if (F(x_kmas1) == 0): # if(x_kmas1== x_k):
         raiz = x_kmas1
         print "RAIZ HALLADA: ", raiz
         break
