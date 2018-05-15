@@ -16,7 +16,7 @@ Mo = round(Mo, 3)
 a = 1
 
 #Funcion a la que deseo hallar raiz
-#Provisoria: utilizo raiz de x como ejemplo para probar que primero
+#Provisoria: utilizo raiz de y como ejemplo para probar que primero
 #funciona el metodo implementado
 def F(y,m=0):
     return (-2*K*y*(1-Lo/(math.sqrt((y**2)+(a**2))))-m*g)
@@ -30,21 +30,39 @@ def Fprima(y):
 
 def G(y):
     return (y - (F(y)/Fprima(y)))
+
+def cte_asintotica_del_error(y_kmas1, y_k, y_kmenos1, p):
+    return (abs((y_kmas1 - y_k)) / abs((y_k - y_kmenos1))**p)
+
+def orden_de_convergencia(y_kmas1, y_k, y_kmenos1, y_kmenos2):
+    return (math.log( abs((y_kmas1 - y_k))/ abs((y_k - y_kmenos1)) ) / math.log( abs((y_k - y_kmenos1))/ abs((y_kmenos1 - y_kmenos2)) ))
+
             
 #Proximo, se define un punto perteneciente al intervalo que cumple con los requisitos
-#xseed por la variable x y por ser la semilla del problema :)
-xseed = 46484684
+#yseed por la variable y y por ser la semilla del problema :)
+yseed = 3
 
 
 #c) Newton-Raphson:
 iteraciones = 60
-print "k\t\tx_k\t\tDELTAX (x_k - x_k-1)\t\tDELTAX/X_k"
-x_k = xseed
+y_kmenos2 = 0
+y_kmenos1 = 0
+#print "k\t\ty_k\t\tDELTAy (y_k - y_k-1)\t\tDELTAy/y_k"
+print "k\ty_k\tDELTAy\tDELTAy/y_k\tlambda\tp"
+print 0, "\t", yseed
+y_k = yseed
 for k in range(iteraciones):
-    x_kmas1 = G(x_k)
-    print k+1,'\t\t', x_kmas1,'\t\t', x_kmas1 - x_k,'\t\t', (x_kmas1 - x_k)/x_k
-    if (F(x_kmas1) == 0): # if(x_kmas1== x_k):
-        raiz = x_kmas1
-        print "RAIZ HALLADA: ", raiz
+    y_kmas1 = G(y_k)
+    print k+1,'\t', y_kmas1,'\t', abs(y_kmas1 - y_k),'\t', abs(y_kmas1 - y_k)/y_k,
+    if k > 2: #Necesito 4 valores de y
+        p = orden_de_convergencia(y_kmas1, y_k, y_kmenos1, y_kmenos2)
+        lamda = cte_asintotica_del_error(y_kmas1, y_k, y_kmenos1, p)
+        print '\t', lamda, '\t', p,
+    if (F(y_kmas1) == 0): # if(y_kmas1== y_k):
+        raiz = y_kmas1
+        print "\nRAIZ HALLADA: ", raiz
         break
-    x_k = x_kmas1
+    print ""
+    y_kmenos2 = y_kmenos1
+    y_kmenos1 = y_k
+    y_k = y_kmas1
